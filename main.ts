@@ -782,6 +782,9 @@ controller.down.onEvent(ControllerButtonEvent.Pressed, function () {
     true
     )
 })
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Player, function (sprite, otherSprite) {
+    game.splash("Hello Adventure Go down to the Village to learn more")
+})
 let Mouse: Sprite = null
 tiles.setCurrentTilemap(tilemap`level2`)
 Mouse = sprites.create(img`
@@ -820,24 +823,24 @@ Mouse = sprites.create(img`
     .......fffff........fffff.......
     `, SpriteKind.Player)
 let ranodom_ransacekr_of_akdjamdklnm_npc_aka_ball_sack = sprites.create(img`
-    . . . . f f f f f . . . . . . . 
-    . . . f e e e e e f . . . . . . 
-    . . f d d d d e e e f . . . . . 
-    . c d f d d f d e e f f . . . . 
-    . c d f d d f d e e d d f . . . 
-    c d e e d d d d e e b d c . . . 
-    c d d d d c d d e e b d c . . . 
-    c c c c c d d e e e f c . . . . 
-    . f d d d d e e e f f . . . . . 
-    . . f f f f f e e e e f . . . . 
-    . . . . f f e e e e e e f . f f 
-    . . . f e e f e e f e e f . e f 
-    . . f e e f e e f e e e f . e f 
-    . f b d f d b f b b f e f f e f 
-    . f d d f d d f d d b e f f f f 
-    . . f f f f f f f f f f f f f . 
+    . . . . . . . f f f f f . . . . 
+    . . . . . . f e e e e e f . . . 
+    . . . . . f e e e d d d d f . . 
+    . . . . f f e e d f d d f d c . 
+    . . . f d d e e d f d d f d c . 
+    . . . c d b e e d d d d e e d c 
+    . . . c d b e e d d c d d d d c 
+    . . . . c f e e e d d c c c c c 
+    . . . . . f f e e e d d d d f . 
+    . . . . f e e e e f f f f f . . 
+    f f . f e e e e e e f f . . . . 
+    f e . f e e f e e f e e f . . . 
+    f e . f e e e f e e f e e f . . 
+    f e f f e f b b f b d f d b f . 
+    f f f f e b d d f d d f d d f . 
+    . f f f f f f f f f f f f f . . 
     `, SpriteKind.Player)
 controller.moveSprite(Mouse)
 scene.cameraFollowSprite(Mouse)
-Mouse.setPosition(132, 120)
+Mouse.setPosition(24, 22)
 ranodom_ransacekr_of_akdjamdklnm_npc_aka_ball_sack.setPosition(160, 120)
