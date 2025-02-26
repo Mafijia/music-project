@@ -142,8 +142,14 @@ controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
     true
     )
 })
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile34`, function (sprite, location) {
+    let mySprite: Sprite = null
+    mySprite.setPosition(0, 0)
+})
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile24`, function (sprite, location) {
     tiles.setCurrentTilemap(tilemap`level1`)
+    scene.cameraFollowSprite(Mouse)
+    sprites.destroy(ranodom_ransacekr_of_akdjamdklnm_npc_aka_ball_sack)
 })
 controller.down.onEvent(ControllerButtonEvent.Released, function () {
     animation.runImageAnimation(
