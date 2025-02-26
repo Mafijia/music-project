@@ -143,8 +143,9 @@ controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
     )
 })
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile34`, function (sprite, location) {
-    let mySprite: Sprite = null
-    mySprite.setPosition(0, 0)
+    tiles.setCurrentTilemap(tilemap`level2`)
+    Mouse.setPosition(0, 0)
+    ranodom_ransacekr_of_akdjamdklnm_npc_aka_ball_sack.setPosition(160, 120)
 })
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile24`, function (sprite, location) {
     tiles.setCurrentTilemap(tilemap`level1`)
