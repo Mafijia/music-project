@@ -142,6 +142,9 @@ controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
     true
     )
 })
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile24`, function (sprite, location) {
+    tiles.setCurrentTilemap(tilemap`level1`)
+})
 controller.down.onEvent(ControllerButtonEvent.Released, function () {
     animation.runImageAnimation(
     Mouse,
@@ -434,6 +437,20 @@ controller.left.onEvent(ControllerButtonEvent.Released, function () {
         `],
     200,
     true
+    )
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile29`, function (sprite, location) {
+    tiles.setCurrentTilemap(tilemap`level4`)
+    scene.cameraFollowSprite(Mouse)
+    sprites.destroy(ranodom_ransacekr_of_akdjamdklnm_npc_aka_ball_sack)
+    MakeyMakey.setSimulatorKeymap(
+    MakeyMakey.PlayerNumber.ONE,
+    MakeyMakey.MakeyMakeyKey.UP,
+    MakeyMakey.MakeyMakeyKey.UP,
+    MakeyMakey.MakeyMakeyKey.UP,
+    MakeyMakey.MakeyMakeyKey.UP,
+    MakeyMakey.MakeyMakeyKey.UP,
+    MakeyMakey.MakeyMakeyKey.UP
     )
 })
 controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
@@ -784,7 +801,9 @@ controller.down.onEvent(ControllerButtonEvent.Pressed, function () {
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Player, function (sprite, otherSprite) {
     game.splash("Hello Adventure Go down to the Village to learn more")
+    pause(5000)
 })
+let ranodom_ransacekr_of_akdjamdklnm_npc_aka_ball_sack: Sprite = null
 let Mouse: Sprite = null
 tiles.setCurrentTilemap(tilemap`level2`)
 Mouse = sprites.create(img`
@@ -822,7 +841,7 @@ Mouse = sprites.create(img`
     .......fccccff....ffccccf.......
     .......fffff........fffff.......
     `, SpriteKind.Player)
-let ranodom_ransacekr_of_akdjamdklnm_npc_aka_ball_sack = sprites.create(img`
+ranodom_ransacekr_of_akdjamdklnm_npc_aka_ball_sack = sprites.create(img`
     . . . . . . . f f f f f . . . . 
     . . . . . . f e e e e e f . . . 
     . . . . . f e e e d d d d f . . 
@@ -840,7 +859,7 @@ let ranodom_ransacekr_of_akdjamdklnm_npc_aka_ball_sack = sprites.create(img`
     f f f f e b d d f d d f d d f . 
     . f f f f f f f f f f f f f . . 
     `, SpriteKind.Player)
-controller.moveSprite(Mouse)
+controller.moveSprite(Mouse, 100, 100)
 scene.cameraFollowSprite(Mouse)
 Mouse.setPosition(24, 22)
 ranodom_ransacekr_of_akdjamdklnm_npc_aka_ball_sack.setPosition(160, 120)
